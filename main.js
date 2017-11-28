@@ -24,3 +24,14 @@ ipcMain.on('compromisso-apagado',(event, arquivoApagado) => {
 
     data.removeArquivoDaPasta(arquivoApagado);
 });
+
+let errorWindow = null;
+ipcMain.on('abre-janela-erro',() => {
+    errorWindow = new BrowserWindow({
+
+        width:500,
+        height:100,
+        alwaysOnTop:true,
+    });
+    errorWindow.loadURL(`file://${__dirname}/app/erro.html`)
+});

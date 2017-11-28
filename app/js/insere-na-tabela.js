@@ -19,7 +19,6 @@ module.exports = {
 
         let td2 = this.montaTd(textoCompr);
         let compromisso = this.montaTr(td2);
-        console.log(td2);
         let tabelaCompr = document.querySelector('.tabela-compromissos');
         tabelaCompr.appendChild(compromisso);
     }

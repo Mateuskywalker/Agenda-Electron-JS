@@ -22,17 +22,26 @@ botaoEnviar.addEventListener('click', event => {
 
     event.preventDefault();
 
+    /* Fazendo a verificacao do Campo de insercao */
     let compr = novoCompr.value;
-    console.log(compr);
 
-    template.insereNaTabela(compr);
+    let padraoInsercao = "DD - MM -- TEXTO DO COMPROMISSO";
+    let inserido = new RegExp(compr,'i');
 
-    new Notification('AGENDA LEGAL',{
-        body: 'Novo compromisso adicionado'
-    })
+    if(!inserido.test(padraoInsercao)){
+        
+        ipcRenderer.send('abre-janela-erro');
+    }else{
 
-    novoCompr.value = '';
-    ipcRenderer.send('compromisso-adicionado',compr);
+        template.insereNaTabela(compr);
+
+        new Notification('AGENDA LEGAL',{
+            body: 'Novo compromisso adicionado'
+        })
+
+        novoCompr.value = '';
+        ipcRenderer.send('compromisso-adicionado',compr);
+    }
 });
 
 if(remove.removeCompr(tabelaCompr)){
