@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda Legal</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <main>
+
+    <div id="insercao">
+        <label id="text-insercao" for="compromisso">Insira um novo compromisso</label>
+        <input type="text" id="compromisso" value="">
+    </div>
+    <img src="img/plus.svg" class="botao"/>
+
+
+        <div id="label">
+            <label class="alert alert-success">Insira na seguinte forma:  DD - MM -- TEXTO DO COMPROMISSO</label>
+        </div>
+
+            <table class="table">
+                <thead class="thead">
+                    <th>
+                        COMPROMISSOS
+                    </th>
+                </thead>
+
+                <tbody class="tabela-compromissos">
+
+                </tbody>
+            </table>
+    </main>
+
+        <script>require("./js/renderer.js")</script>
+        <script>require("./js/insere-na-tabela.js")</script>
+        <script>require("./js/remove-compr.js")</script>
+</body>
+</html>

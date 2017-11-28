@@ -1,0 +1,61 @@
+.fadeOut{
+
+    opacity: 0;
+    transition: 0.5s;
+}
+
+td{
+    border-top: 1px solid black;
+}
+
+.table{
+
+    margin-top: 50px;
+}
+
+#insercao{
+    margin-left: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+table thead th{
+
+    text-align: center;
+}
+
+#label{
+
+    margin-top: 30px;
+    margin-left: 75px;
+    font-size: 13pt;
+}
+
+#text-insercao{
+    font-size: 15pt;
+}
+
+.compromisso{
+
+    border-top-color: transparent;
+}
+
+input{
+
+    font-size:18px;
+    padding:5px 10px 10px 5px;
+    display:inline-block;;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+    background-color: #f4e6fc;
+}
+
+.botao{
+
+    width: 35px;
+    height: 35px;
+    float: right;
+    margin-right: 40px;
+    margin-top: -35px;
+}
