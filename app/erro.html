@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
     <meta charset="UTF-8">
     <title>Agenda Legal</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/erro.css">
+
 </head>
 <body>
-    <span class="alert alert-danger">O compromisso inserido não é válido</span>
+    <div id="erroContent">
+
+        <span id="erro" class="alert alert-danger">O compromisso inserido não é válido</span>
+
+    </div>
+    <button id="OkErro" class="btn btn-primary">Ok</button>
+
     <script>require("./js/erro.js")</script>
 </body>
 </html>

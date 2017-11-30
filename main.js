@@ -19,7 +19,6 @@ ipcMain.on('compromisso-adicionado',(event,compr) => {
     data.criaArquivoDoCompromisso(compr,compr);
 });
 
-
 ipcMain.on('compromisso-apagado',(event, arquivoApagado) => {
 
     data.removeArquivoDaPasta(arquivoApagado);
@@ -29,9 +28,15 @@ let errorWindow = null;
 ipcMain.on('abre-janela-erro',() => {
     errorWindow = new BrowserWindow({
 
-        width:500,
-        height:100,
-        alwaysOnTop:true,
+        width: 500,
+        height: 100,
+        alwaysOnTop: true,
+        frame: false
     });
     errorWindow.loadURL(`file://${__dirname}/app/erro.html`)
+});
+
+ipcMain.on('OkErro-clicado',() => {
+
+        errorWindow.close();
 });

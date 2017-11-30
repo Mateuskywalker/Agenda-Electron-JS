@@ -7,6 +7,7 @@ let botaoEnviar = document.querySelector('.botao');
 let novoCompr = document.querySelector('#compromisso');
 let tabelaCompr = document.querySelector('.tabela-compromissos');
 
+
 window.onload = () => {
 
     let compromissos = data.pegaNomeDoCompromisso();
@@ -25,11 +26,11 @@ botaoEnviar.addEventListener('click', event => {
     /* Fazendo a verificacao do Campo de insercao */
     let compr = novoCompr.value;
 
-    let padraoInsercao = "DD - MM -- TEXTO DO COMPROMISSO";
+    let padraoInsercao = /\d{2}\D\d{2} -- [A-Z]...[A-Z]/;
     let inserido = new RegExp(compr,'i');
 
-    if(!inserido.test(padraoInsercao)){
-        
+    if(!padraoInsercao.test(inserido)){
+
         ipcRenderer.send('abre-janela-erro');
     }else{
 
