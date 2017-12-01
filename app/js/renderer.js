@@ -6,20 +6,6 @@ const data = require('./data');
 let botaoEnviar = document.querySelector('.botao');
 let novoCompr = document.querySelector('#compromisso');
 let tabelaCompr = document.querySelector('.tabela-compromissos');
-let calendario = document.querySelector('.calendario');
-
-/* Trazendo o resultado do calendario */
-calendario.addEventListener('click',(event)=>{
-
-    event.preventDefault();
-    let data = calendario.value
-
-    /* Acha o mes e o dia selecionados: -mm-dd*/
-    let mesDia = /\D\d{2}\D\d{2}$/;
-    let resultado = mesDia.exec(data);
-    console.log(resultado);
-});
-
 
 window.onload = () => {
 
@@ -36,6 +22,7 @@ window.onload = () => {
 botaoEnviar.addEventListener('click', event => {
 
     event.preventDefault();
+    console.log('teste');
 
     /* Fazendo a verificacao do Campo de insercao */
     let compr = novoCompr.value;
